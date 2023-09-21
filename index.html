@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random password Generator</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+     <section id="main_page">
+          <section id="main_header">
+           <div id="main_title">
+                <h1 class="title"> Random Password Generator </h1>
+           </div>
+           <div id="sub_title">
+                <p class="s_title">Create strong and secure passwords to keep your account safe online.</p>
+           </div>
+        </section>
+        <section id="main_page1">
+               <section id="image">
+                      <img id="img" src="" alt="" srcset="">
+                </section>
+                <section id="Generator_part">
+                    <div id="Generator_input_box">
+                    <div id="Generator_field">
+                        <div id="password">
+                              <P id="password_text" class="s_title"></P>
+                        </div>
+                        <span id="quaulity_badge">
+                               
+                        </span>
+                        <div id="generate_icon">
+                           <button id="btn" onclick="rgw()"><img src="imgs/refresh.png" alt="refresh"></button>
+                        </div>
+                    </div>
+                     <div>
+                         <button id="copy_btn" onclick="copyPassword()">copy</button>
+                     </div>
+                    </div>
+                     <div id="password_length_setting">
+                         <label for="slide" class="s_title" id="label_of_slide">password length:</label>
+                         <span id="password_length" class="s_title">15</span>
+                         <button id="length_minus" onclick="dec_len()"><img src="imgs/minus.png" alt="minus"></button>
+                         <input type="range" id="slide" name="slide" min="1" max="50" value="15" onchange="slideChange()">
+                         <button id="length_plus" onclick="inc_len()"><img src="imgs/plus.png" alt="plus"></button>
+                     </div>
+                     <div id="complexity_setting">
+                         <label  id="char_choice_label" class="s_title">characters used:</label>
+                         <div class="custom">
+                              <input type="checkbox" name="lowercase" id="lowercase" class="custom-check" checked onclick="rgw()">
+                              <label for="lowercase" class="s_title">abc</label>
+                         </div>
+                         <div class="custom">
+                              <input type="checkbox" name="uppercase" id="uppercase" class="custom-check" checked onclick="rgw()">
+                              <label for="uppercase" class="s_title">ABC</label>
+                         </div>
+                         <div class="custom">
+                              <input type="checkbox" name="numbers" id="numbers" class="custom-check" checked onclick="rgw()">
+                              <label for="numbers" class="s_title">123</label>
+                         </div>
+                         <div class="custom">
+                              <input type="checkbox" name="specialchar" id="specialchar" class="custom-check" checked  onclick="rgw()">
+                              <label for="specialchar" class="s_title">$#@%</label>
+                         </div>
+
+                     </div>
+                </section>
+    </section>
+     </section>
+</body>
+
+ <script src="main.js"></script><!-- main script -->
+  <script>
+     rgw();
+ </script> 
+ <script src="functional.js"></script>
+</html>

@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada:wght@400;500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    /* transition: 0.5s ease-in-out; */
+}
+
+  
+/* layout and font styling */
+  #main_page
+  {
+    padding: 7rem 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(239 226 212 / 54%);
+  }
+.title
+{
+    color: #000;
+    margin: 8px 0 48px 45px;
+    font-size: 2.625rem;
+    line-height: 3.375rem;
+    font-size: 42px;
+    font-family: 'Radio Canada', sans-serif;
+}
+.s_title{
+    color: #000;
+    margin: 0;
+    font-size: 22px;
+    font-family: 'Radio Canada', sans-serif;
+}
+#main_page1
+{
+    display: flex;
+    flex-direction: row;
+    width: 99vw;
+    height: 55vh;
+    /* border:2px solid black; */
+    margin-top:1rem;
+}
+#image
+{
+    width: 30vw;
+    height: 50vh;
+    /* border:2px solid black; */
+    margin: auto;
+}
+#img
+{
+  width: 30vw;
+  height: 50vh;
+  overflow-y: hidden;
+  
+}
+/* img animation  */
+
+#Generator_part
+{
+    width: 66vw;
+    height: 50vh;
+    /* border: 2px solid black; */
+    margin: auto;
+}
+
+/* genereter input field styling  */
+#Generator_input_box
+{
+    display: flex;
+    flex-direction: row;
+    margin-top:36px;
+}
+#Generator_field
+{
+    display: flex;
+    flex-direction: row;
+    height: 56px;
+    width:535px;
+    background-color: white;
+    border-radius: 24px;
+    margin:1rem auto;
+}
+#password
+{
+    width: 60%;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: .1px;
+    color: #261c6a;
+    padding: 10px 0 10px 24px;
+    margin: 0;
+    border: none;
+    border-radius: 24px;
+    outline: none;
+    background-color: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -webkit-user-select: all;
+    -moz-user-select: all;
+    -ms-user-select: all;
+    user-select: all;
+    cursor: text;
+}
+
+#quaulity_badge
+{
+    background-color: #0070f6;
+    color: aliceblue;
+    font-size: 17px;
+    line-height: 27px;
+    letter-spacing: 2px;
+    padding: 0 1rem;
+    height: 2rem;
+    width: 9rem;
+    font-weight: 900;
+    border-radius: 24px;
+    align-self: center;
+    font-family: 'Radio Canada', sans-serif;
+}
+#btn
+{
+   background-color: white;
+    border: 0;
+}
+#generate_icon
+{ height: 50px;
+    width: 50px;
+}
+#generate_icon button img
+{
+    height: 30px;
+    width: 30px;
+    margin-top: 12px;
+    margin-left: 10px;
+}
+#generate_icon button:hover
+{
+    cursor: pointer;
+}
+#copy_btn
+{
+    position: relative;
+    font-size: .875rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 0 32px;
+    display: inline-flex;
+    align-items: center;
+    height: 56px;
+    z-index: 0;
+    border-width: 0;
+    margin-top: 14px;
+    margin-right: 67px;
+    background: blue;
+    color: white;
+    border-radius: 24px;
+}
+#copy_btn:hover
+{
+  height: 60px;
+  transition: 0.2s ease-in-out;
+  background-color: #0070f6;
+}
+#password_length_setting
+{
+    display: flex;
+    flex-direction: row;
+    width:720px;
+    margin: auto;
+    margin-top:80px;
+}
+#label_of_slide
+{
+    margin-right:22px;
+}
+#password_length
+{
+    margin-right:140px
+}
+input[type="range"] {
+    -webkit-appearance: none;
+    margin-right: 15px;
+    width: 200px;
+    height: 7px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+    background-image: linear-gradient(blue,blue);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 0 2px 0 #555;
+    transition: .3s ease-in-out;
+  }
+  
+  input[type=range]::-webkit-slider-runnable-track  {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+  }
+  #length_minus
+  {
+    background: rgb(245 241 236 / 54%);
+    margin-right: 10px;
+    border: 0;
+    padding-bottom: 25px;
+  }
+  #length_plus
+  {
+    background: rgb(245 241 236 / 54%);
+    margin-left: 10px;
+    border: 0;
+    padding-bottom: 25px;
+  }
+  #length_minus img , #length_plus img
+  {
+    height: 30px;
+    width: 30px;
+  }
+  #complexity_setting
+  {
+    display: flex;
+    flex-direction: row;
+    width:720px;
+    margin: auto;
+    margin-top:70px;
+  }
+  .custom
+  {
+    margin-left:65px;
+  }
+  
