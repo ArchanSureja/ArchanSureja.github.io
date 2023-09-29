@@ -2,7 +2,7 @@
 
 function copyPassword()
 {
-    let password=document.querySelector('#password_text').innerHTML;
+    let password=document.querySelector('#password_text').value;
     navigator.clipboard.writeText(password);
     alert('password copied to your clipboard');
 }
