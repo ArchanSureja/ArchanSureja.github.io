@@ -15,6 +15,7 @@ var img;
 // main variables 
 var password;
 var strength;
+var passwordVisible=false;
 
 // ------------------- password generation part ------------------------------////
 
@@ -163,7 +164,7 @@ function writeTOwebpage()
     let password_tag=document.querySelector('#password_text');
     let strength_tag=document.querySelector('#quaulity_badge');
     // writing into web page usinf innerHTML 
-    password_tag.innerHTML=password;
+    password_tag.value=password;
     if(strength=="Very Weak")
     {
         strength_tag.style.backgroundColor="#f5203e";

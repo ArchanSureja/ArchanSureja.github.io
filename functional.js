@@ -33,3 +33,17 @@ function dec_len()
     len.innerHTML=slide.value;
     rgw();
 }
+//toggle password visibility 
+function show()
+{
+    if(passwordVisible==false)
+    {
+        passwordVisible=true;
+        document.querySelector('#password_text').type='text';
+    }
+    else
+    {
+        passwordVisible=false;
+        document.querySelector('#password_text').type='password';
+    }
+}

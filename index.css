@@ -85,28 +85,33 @@
 }
 #password
 {
-    width: 60%;
-    text-align: left;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: .1px;
-    color: #261c6a;
-    padding: 10px 0 10px 24px;
-    margin: 0;
-    border: none;
-    border-radius: 24px;
-    outline: none;
-    background-color: #fff;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    -webkit-user-select: all;
-    -moz-user-select: all;
-    -ms-user-select: all;
-    user-select: all;
-    cursor: text;
+  width: 60%;
+  text-align: left;
+  font-size: 23px;
+  line-height: 1.5;
+  letter-spacing: .1px;
+  color: #261c6a;
+  padding: 10px 0 10px 24px;
+  margin: 0;
+  border: none;
+  border-radius: 24px;
+  outline: none;
+  background-color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -webkit-user-select: all;
+  -moz-user-select: all;
+  -ms-user-select: all;
+  user-select: all;
+  cursor: text;
 }
-
+input#password_text
+{
+  font-size: large;
+  border: none;
+  width: 172px;
+}
 #quaulity_badge
 {
     background-color: #0070f6;
@@ -139,6 +144,26 @@
     margin-left: 10px;
 }
 #generate_icon button:hover
+{
+    cursor: pointer;
+}
+#btn_show
+{
+   background-color: white;
+    border: 0;
+}
+#show_icon
+{ height: 50px;
+    width: 50px;
+}
+#show_icon button img
+{
+    height: 30px;
+    width: 30px;
+    margin-top: 12px;
+    margin-right: 10px;
+}
+#show_icon button:hover
 {
     cursor: pointer;
 }
