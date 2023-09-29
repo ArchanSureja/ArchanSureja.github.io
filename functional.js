@@ -3,6 +3,7 @@
 function copyPassword()
 {
     let password=document.querySelector('#password_text').value;
+    console.log(password);
     navigator.clipboard.writeText(password);
     alert('password copied to your clipboard');
 }
