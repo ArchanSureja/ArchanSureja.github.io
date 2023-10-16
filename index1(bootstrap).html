@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generator</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+     <link rel="stylesheet" href="index.css">
+     <style>
+        div
+        {
+            border: 1px solid black;
+            height: auto;
+        }
+        #main_page 
+        {
+            margin-top:12%;
+        }
+        .title
+        {
+          color: #000;
+          /* margin: 8px 0 48px 45px; */
+          font-size: 2.625rem;
+          line-height: 3.375rem;
+          font-size: 42px;
+          font-family: 'Radio Canada', sans-serif;
+          width: 50%;
+          margin:auto;
+        }
+        .s_title{
+            color: #000;
+            margin: 0;
+            font-size: 22px;
+            font-family: 'Radio Canada', sans-serif;
+            width: 62%;
+            margin: auto;
+        }
+     </style>
+</head>
+<body>
+    <div class="container" id="main_page" style="height: auto;">
+        <div class="row" style="height: auto;">
+            <div class="col-md-12" style="height:auto;">
+                 <h1 class="title"> Random Password Generator </h1>
+                 <p class="s_title">Create strong and secure passwords to keep your account safe online.</p>
+            </div>
+        </div>
+        <div class="row" style="height:329%;">
+            <div class="col-md-4"></div>
+            <div class="col-md-8" style="height: 100%;">
+                <div id="Generator_input_box">
+                    <div id="Generator_field">
+                        <div id="password">
+                             <input type="password" name="" id="password_text" value="" readonly >
+                        </div>
+                        <div id="show_icon">
+                         <button id="btn_show" onclick="show()"><img src="imgs/show.png" alt="show"></button>
+                      </div>
+                        <span id="quaulity_badge">
+                               
+                        </span>
+                        <div id="generate_icon">
+                           <button id="btn" onclick="rgw()"><img src="imgs/refresh.png" alt="refresh"></button>
+                        </div>
+                    </div>
+                     <div>
+                         <button id="copy_btn" onclick="copyPassword()">copy</button>
+                     </div>
+                    </div>
+                     <div id="password_length_setting">
+                         <label for="slide" class="s_title" id="label_of_slide">password length:</label>
+                         <span id="password_length" class="s_title">15</span>
+                         <button id="length_minus" onclick="dec_len()"><img src="imgs/minus.png" alt="minus"></button>
+                         <input type="range" id="slide" name="slide" min="1" max="50" value="15" onchange="slideChange()">
+                         <button id="length_plus" onclick="inc_len()"><img src="imgs/plus.png" alt="plus"></button>
+                     </div>
+                     <div id="complexity_setting">
+                         <label  id="char_choice_label" class="s_title">characters used:</label>
+                         <div class="custom">
+                              <input type="checkbox" name="lowercase" id="lowercase" class="custom-check" checked onclick="rgw()">
+                              <label for="lowercase" class="s_title">abc</label>
+                         </div>
+                         <div class="custom">
+                              <input type="checkbox" name="uppercase" id="uppercase" class="custom-check" checked onclick="rgw()">
+                              <label for="uppercase" class="s_title">ABC</label>
+                         </div>
+                         <div class="custom">
+                              <input type="checkbox" name="numbers" id="numbers" class="custom-check" checked onclick="rgw()">
+                              <label for="numbers" class="s_title">123</label>
+                         </div>
+                         <div class="custom">
+                              <input type="checkbox" name="specialchar" id="specialchar" class="custom-check" checked  onclick="rgw()">
+                              <label for="specialchar" class="s_title">$#@%</label>
+                         </div>
+
+                     </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script src="main.js"></script>
+<script src="functional.js"></script>
+</html>

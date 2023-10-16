@@ -39,25 +39,6 @@ function RandomPasswordGenerater(desired_length,useUppercase,useLowercase,useNum
       {
         char_pool+=specialchar;
       }
-    //  console.log(char_pool);  // debugging and testing 
-
-    // two condition handling
-
-    // 1. user has not selected any requirments 
-    if(char_pool.length==0)
-    {
-        alert('please select at least one set of characters to be used in password');
-    }
-
-    // 2. minimum possible length with given requirments is greater than the desired length means desired password length is too small to met all requirments with given desired length
-      
-        // calculating minimum possible length 
-          min_possible_length=(useUppercase ? 1:0) + (useLowercase ? 1:0) + (useNumber ? 1:0) + (useSpecialChar ? 1:0);
-
-        if(min_possible_length > desired_length)
-        {
-            alert('your character set requirments and desired length is conflicting');
-        }
     let password='';
     for(let i=0;i<desired_length;i++)
     {
@@ -152,9 +133,23 @@ function readRequirments()
 } 
 // --------------- function to generate password and strength ----------- //
 function generate()
-{
-    password=RandomPasswordGenerater(desired_length,useUppercase,useLowercase,useNumber,useSpecialChar);
-    strength=checkStrength(password);
+{   
+  // if user does not select anything from char sets by default pasword is generated
+      if(useLowercase==false && useUppercase==false && useNumber==false && useSpecialChar==false)
+      {
+        alert('you have not selected any char sets by default password is generated');
+        password=RandomPasswordGenerater(15,true,true,true,true);
+        useLowercase=document.querySelector('#lowercase').checked=true;
+        useUppercase=document.querySelector('#uppercase').checked=true;
+        useNumber=document.querySelector('#numbers').checked=true;
+        useSpecialChar=document.querySelector('#specialchar').checked=true;
+      }
+      else
+      {
+        password=RandomPasswordGenerater(desired_length,useUppercase,useLowercase,useNumber,useSpecialChar);
+      }
+   
+      strength=checkStrength(password);
 }
 
 // --------- function to write password and it's strength on web page ------------ // 
