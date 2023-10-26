@@ -3,9 +3,21 @@
 function copyPassword()
 {
     let password=document.querySelector('#password_text').value;
-    console.log(password);
+    // console.log(password);
     navigator.clipboard.writeText(password);
-    alert('password copied to your clipboard');
+    alert('password copied to your clipboard and your prefrences are saved');
+
+    // saving the user prefrences to local storage 
+    const user_pref={
+        length : parseInt(desired_length),
+        use_Lowercase : useLowercase,
+        use_Uppercase : useUppercase,
+        use_Numbers : useNumber,
+        use_SpecialChar : useSpecialChar,
+        img_src : img.src
+    }
+    localStorage.setItem('user_pre',JSON.stringify(user_pref));
+
 }
 
 // handling slider and calculating it's width  
@@ -35,16 +47,20 @@ function dec_len()
     rgw();
 }
 //toggle password visibility 
-function show()
+function show_hide_toggle()
 {
+    let icon=document.querySelector('#show_hide_icon');
     if(passwordVisible==false)
     {
         passwordVisible=true;
+        icon.src='imgs/show.png';
         document.querySelector('#password_text').type='text';
+
     }
     else
     {
         passwordVisible=false;
+        icon.src='imgs/hide.png';
         document.querySelector('#password_text').type='password';
     }
 }

@@ -11,7 +11,7 @@ var useNumber;
 var useSpecialChar;
 var desired_length;
 var img;
-
+var one_time_pre=1;
 // main variables 
 var password;
 var strength;
@@ -80,11 +80,11 @@ function checkStrength(password)
           hasSpeacialchar=true;
         }
     }
-    if(p.length>8)
+    if(p.length>6)
     {
       strength++;
     }
-    if(p.length>12)
+    if(p.length>8)
     {
       strength++;
     }
@@ -122,7 +122,7 @@ function checkStrength(password)
 
 
 // ----------------- function for reading requirments of user -------------- // 
-function readRequirments()
+function readRequirments_from_user()
 {
      useLowercase=document.querySelector('#lowercase').checked;
      useUppercase=document.querySelector('#uppercase').checked;
@@ -131,6 +131,19 @@ function readRequirments()
      desired_length=document.querySelector('#password_length').innerHTML;
      img=document.querySelector('#img');
 } 
+// ---------- function for setting requirments as user prefrences -------------- //
+function set_requirements_as_pre()
+{
+     let stored_info=JSON.parse(localStorage.getItem('user_pre'));
+     document.querySelector('#lowercase').checked=stored_info.use_Lowercase;
+     document.querySelector('#uppercase').checked=stored_info.use_Uppercase;
+     document.querySelector('#numbers').checked=stored_info.use_Numbers;
+     document.querySelector('#specialchar').checked=stored_info.use_SpecialChar;
+     document.querySelector('#password_length').innerHTML=stored_info.length;
+     document.querySelector('#img').src=stored_info.img_src;
+     document.querySelector('#slide').value=stored_info.length;
+
+}
 // --------------- function to generate password and strength ----------- //
 function generate()
 {   
@@ -192,9 +205,26 @@ function writeTOwebpage()
 //------- one complete function for reading,generating and writing ---------- //
 function rgw()
 {
-   readRequirments();
-   generate();
-   writeTOwebpage();
+  // localStorage.clear();
+  let stored_info=JSON.parse(localStorage.getItem('user_pre'));
+  if(stored_info && one_time_pre==1)
+  {
+      console.log('using_user_pre');
+      set_requirements_as_pre();
+      one_time_pre++;
+      readRequirments_from_user();
+      generate();
+      writeTOwebpage();
+      
+  }
+  else
+  {
+    readRequirments_from_user();
+    generate();
+    writeTOwebpage();
+  }
+  
+  
 }
 
  
