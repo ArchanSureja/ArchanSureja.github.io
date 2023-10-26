@@ -139,10 +139,10 @@ function generate()
       {
         alert('you have not selected any char sets by default password is generated');
         password=RandomPasswordGenerater(15,true,true,true,true);
-        useLowercase=document.querySelector('#lowercase').checked=true;
-        useUppercase=document.querySelector('#uppercase').checked=true;
-        useNumber=document.querySelector('#numbers').checked=true;
-        useSpecialChar=document.querySelector('#specialchar').checked=true;
+        document.querySelector('#lowercase').checked=true;
+        document.querySelector('#uppercase').checked=true;
+        document.querySelector('#numbers').checked=true;
+        document.querySelector('#specialchar').checked=true;
       }
       else
       {
